@@ -64,6 +64,19 @@ public class GestorLibro {
         }
     }
 
+    public boolean buscarLibroPorIsbn(Libro libroBuscar){
+        boolean bandera = false;
+        for (Libro li : libros) {
+            if(li.getIsbn().equals(libroBuscar.getIsbn())){
+                bandera=true;
+                return bandera;
+            }else{
+                bandera = false;
+            }
+        }
+        return bandera;
+    }
+
   /*  public static void main(String[] args) {
         
         GestorLibro g = new GestorLibro();
@@ -81,7 +94,7 @@ public class GestorLibro {
         g.agregarLibro(libro6);
 
         g.mostrarLibrosEnOrdenAscendente();
-System.out.println();
+        System.out.println();
         g.mostrarLibrosEnOrdenDescendente();
 
       

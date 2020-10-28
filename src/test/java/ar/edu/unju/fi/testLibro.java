@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class TestLibro {
+public class testLibro {
 
         Libro libro;
         Libro libro2;
@@ -99,6 +99,16 @@ public class TestLibro {
                 assertNotNull(librosOrdenados);
 
                 gestor.mostrarLibrosOrdenados(librosOrdenados);
+            }
+
+            @Test
+            public void testBuscarLibroPorIsbn() throws Exception{
+                gestor.agregarLibro(libro);
+                gestor.agregarLibro(libro2);
+                gestor.agregarLibro(libro3);
+                gestor.agregarLibro(libro4);
+                assertEquals(4, gestor.getLibros().size());
+                assertTrue(gestor.buscarLibroPorIsbn(libro4));
             }
         
           
