@@ -1,9 +1,17 @@
 package ar.edu.unju.fi;
 
-public class Libro {
+public class Libro implements Comparable<Libro>{
 
     private String isbn;
+
     
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
     public boolean validarIsbn10( String isbn )
     {
@@ -44,18 +52,25 @@ public class Libro {
         }
     }
 
-    public String getIsbn() {
-        return isbn;
+    public int compareTo(Libro libro){
+       return isbn.compareTo(libro.getIsbn());
     }
 
-    public void setIsbn(String isbn) {
+    @Override
+    public String toString() {
+        return "Libro [isbn=" + isbn + "]";
+    }
+
+    public Libro(String isbn) {
         this.isbn = isbn;
     }
 
-   
 
-    
+
+  
 
     
     
 }
+
+
