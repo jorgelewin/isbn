@@ -45,12 +45,6 @@ public class GestorLibro {
         List <Libro> librosOrdenados = libros;
         Collections.sort(librosOrdenados, Collections.reverseOrder());
 
-        for (Libro libro : librosOrdenados) {
-            
-            System.out.println(libro);
-            
-        }
-
         return librosOrdenados;
 
     }
